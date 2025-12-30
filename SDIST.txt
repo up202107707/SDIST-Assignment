@@ -1,0 +1,14 @@
+NTP:
+- Instalation
+sudo apt install ntp
+
+Starting (wsl): sudo ntpd -g
+Cheking status: sudo ntpq -p
+Extract offset: sudo ntpq -c rv
+
+
+
+PTP:
+sudo apt install linuxptp
+
+Starting (wsl): sudo ptp4l -i eth0 -S -m -s
