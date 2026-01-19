@@ -416,21 +416,22 @@ def run_experiments(time_source, base_config, param_sets):
 def main():
     config = {
         "sampling_period": 0.1,
-        "duration": 60.0,
+        "duration": 180.0,
         "drift_ppm": 300.0,
         "initial_offset": 20.0,
         "start_delay": 5.0,
-        "ntp_server": "127.0.0.1",
-        "ptp_interface": "eth0",
-        "offset_noise_std": 100e-6
+        "ntp_server": "time.cloudflare.com",
+        "ptp_interface": "enxe6be7777cdcc",
+        "offset_noise_std": 200e-6
     }
 
     variations = [
-        {"Kp": 0.1,  "Ki": 0.05,  "sync_period": 5.0},
-        {"Kp": 0.2,  "Ki": 0.1,   "sync_period": 5.0},
-        {"Kp": 0.05, "Ki": 0.025, "sync_period": 5.0},
         {"Kp": 0.1,  "Ki": 0.05,  "sync_period": 2.0},
-        {"Kp": 0.1,  "Ki": 0.05,  "sync_period": 10.0},
+        #{"Kp": 0.1,  "Ki": 0.05,  "sync_period": 5.0},
+        #{"Kp": 0.1,  "Ki": 0.05,  "sync_period": 10.0},
+        #{"Kp": 0.05, "Ki": 0.05,  "sync_period": 5.0},
+        #{"Kp": 0.1,  "Ki": 0.025, "sync_period": 5.0},
+        #{"Kp": 0.2,  "Ki": 0.1,   "sync_period": 5.0},
     ]
 
     print("=" * 70)
@@ -439,14 +440,16 @@ def main():
     print()
 
     # Run NTP experiments
-    ntp_source = NTPSource(config["ntp_server"], config["offset_noise_std"])
-    ntp_results, ntp_plot_data = run_experiments(ntp_source, config, variations)
-    print_metrics_table("NTP", ntp_results)
+    #print("Running NTP Experiments...")
+    #ntp_source = NTPSource(config["ntp_server"], config["offset_noise_std"])
+    #ntp_results, ntp_plot_data = run_experiments(ntp_source, config, variations)
+    #print_metrics_table("NTP", ntp_results)
 
     # Show all variations for NTP
-    plot_all_variations("NTP", ntp_plot_data)
+    #plot_all_variations("NTP", ntp_plot_data)
 
     # Run PTP experiments
+    print("Running PTP Experiments...")
     ptp_source = PTPSource(config["ptp_interface"], config["offset_noise_std"])
     ptp_results, ptp_plot_data = run_experiments(ptp_source, config, variations)
     print_metrics_table("PTP", ptp_results)
