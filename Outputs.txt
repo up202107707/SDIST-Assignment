@@ -1,0 +1,810 @@
+Preparing: Sync=5s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=5s (Stable)
+  Protocol: NTP
+  Duration: 300s | Sync: 5.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769292745.316564  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17891.361ms  |  correction=   +0.000ppm
+[NTP] Rotating to server: 1.pt.pool.ntp.org
+  [NTP] Query failed (1/3): NTP timeout: ntp04.oal.ul.pt
+  [t=  15.0s] SYNC  offset=-8295.354ms  |  correction=-921413.487ppm
+  [t=  20.0s] SYNC  offset=-8300.643ms  |  correction=-454055.670ppm
+  [t=  20.0s] STATUS  clock=1769292749.847317  |  rate=0.435467864
+  [t=  25.0s] SYNC  offset=-7651.608ms  |  correction=-565032.136ppm
+  [t=  30.0s] SYNC  offset=-4984.009ms  |  correction=-532580.376ppm
+  [t=  30.1s] STATUS  clock=1769292754.438525  |  rate=0.601299572
+  [t=  35.0s] SYNC  offset=-2990.952ms  |  correction=-399200.428ppm
+  [t=  40.0s] SYNC  offset=-1495.219ms  |  correction=-299547.625ppm
+  [t=  40.1s] STATUS  clock=1769292760.984693  |  rate=0.775739038
+  [t=  45.0s] SYNC  offset= -381.950ms  |  correction=-224760.962ppm
+  [t=  50.0s] SYNC  offset= +460.107ms  |  correction=-169097.507ppm
+  [t=  50.2s] STATUS  clock=1769292769.127495  |  rate=0.874195500
+  [t=  55.0s] SYNC  offset=+1090.275ms  |  correction=-126304.500ppm
+  [t=  60.0s] SYNC  offset=+1552.214ms  |  correction=-93160.906ppm
+  [t=  60.2s] STATUS  clock=1769292778.052749  |  rate=0.932763989
+  [t=  65.0s] SYNC  offset=+1886.679ms  |  correction=-67736.011ppm
+  [t=  70.0s] SYNC  offset=+2140.249ms  |  correction=-48182.726ppm
+  [t=  70.3s] STATUS  clock=1769292787.585592  |  rate=0.968207182
+  [t=  75.0s] SYNC  offset=+2289.332ms  |  correction=-32292.818ppm
+  [t=  80.1s] SYNC  offset=+2411.610ms  |  correction=-21403.364ppm
+  [t=  80.4s] STATUS  clock=1769292797.428266  |  rate=0.988828925
+  [t=  85.1s] SYNC  offset=+2452.846ms  |  correction=-11671.075ppm
+  [t=  90.1s] SYNC  offset=+2474.725ms  |  correction=-5929.870ppm
+  [t=  90.5s] STATUS  clock=1769292807.449382  |  rate=0.999377445
+  [t=  95.1s] SYNC  offset=+2477.998ms  |  correction=-1122.555ppm
+  [t= 100.1s] SYNC  offset=+2462.499ms  |  correction=+2757.970ppm
+  [t= 100.6s] STATUS  clock=1769292817.566540  |  rate=1.006176035
+  [t= 105.1s] SYNC  offset=+2452.677ms  |  correction=+5676.035ppm
+  [t= 110.1s] SYNC  offset=+2384.930ms  |  correction=+8863.689ppm
+  [t= 110.7s] STATUS  clock=1769292827.747240  |  rate=1.009554778
+  [t= 115.1s] SYNC  offset=+2340.991ms  |  correction=+9054.778ppm
+  [t= 120.1s] SYNC  offset=+2288.864ms  |  correction=+10368.208ppm
+  [t= 120.7s] STATUS  clock=1769292837.850854  |  rate=1.011694285
+  [t= 125.1s] SYNC  offset=+2223.198ms  |  correction=+11194.285ppm
+  [t= 130.1s] SYNC  offset=+2166.669ms  |  correction=+11244.541ppm
+  [t= 130.7s] STATUS  clock=1769292847.968653  |  rate=1.012167631
+  [t= 135.1s] SYNC  offset=+2106.355ms  |  correction=+11667.631ppm
+  [t= 140.1s] SYNC  offset=+2064.750ms  |  correction=+11811.458ppm
+  [t= 140.8s] STATUS  clock=1769292858.192896  |  rate=1.013328336
+  [t= 145.1s] SYNC  offset=+1974.612ms  |  correction=+12828.336ppm
+  [t= 150.1s] SYNC  offset=+1918.343ms  |  correction=+11283.348ppm
+  [t= 150.9s] STATUS  clock=1769292868.418432  |  rate=1.011847068
+  [t= 155.1s] SYNC  offset=+1856.704ms  |  correction=+11347.068ppm
+  [t= 160.1s] SYNC  offset=+1801.565ms  |  correction=+11049.943ppm
+  [t= 160.9s] STATUS  clock=1769292878.535125  |  rate=1.011495418
+  [t= 165.1s] SYNC  offset=+1742.266ms  |  correction=+10995.418ppm
+  [t= 170.1s] SYNC  offset=+1689.085ms  |  correction=+10644.095ppm
+  [t= 171.0s] STATUS  clock=1769292888.748922  |  rate=1.011019526
+  [t= 175.1s] SYNC  offset=+1634.448ms  |  correction=+10519.526ppm
+  [t= 180.1s] SYNC  offset=+1579.018ms  |  correction=+10239.359ppm
+  [t= 181.0s] STATUS  clock=1769292898.857060  |  rate=1.010336426
+  [t= 185.1s] SYNC  offset=+1525.223ms  |  correction=+9836.426ppm
+  [t= 190.1s] SYNC  offset=+1478.296ms  |  correction=+9434.464ppm
+  [t= 191.1s] STATUS  clock=1769292909.058881  |  rate=1.009805890
+  [t= 195.1s] SYNC  offset=+1429.342ms  |  correction=+9305.890ppm
+  [t= 200.1s] SYNC  offset=+1383.635ms  |  correction=+9001.713ppm
+  [t= 201.1s] STATUS  clock=1769292919.154873  |  rate=1.009293342
+  [t= 205.1s] SYNC  offset=+1331.197ms  |  correction=+8793.342ppm
+  [t= 210.1s] SYNC  offset=+1289.937ms  |  correction=+8168.204ppm
+  [t= 211.1s] STATUS  clock=1769292929.244024  |  rate=1.008555856
+  [t= 215.1s] SYNC  offset=+1252.432ms  |  correction=+8055.856ppm
+  [t= 220.1s] SYNC  offset=+1206.204ms  |  correction=+8058.898ppm
+  [t= 221.2s] STATUS  clock=1769292939.429630  |  rate=1.008056783
+  [t= 225.1s] SYNC  offset=+1167.042ms  |  correction=+7556.783ppm
+  [t= 230.1s] SYNC  offset=+1127.192ms  |  correction=+7348.573ppm
+  [t= 231.3s] STATUS  clock=1769292949.609330  |  rate=1.007548984
+  [t= 235.1s] SYNC  offset=+1086.572ms  |  correction=+7048.984ppm
+  [t= 240.1s] SYNC  offset=+1053.207ms  |  correction=+6651.770ppm
+  [t= 241.4s] STATUS  clock=1769292959.782895  |  rate=1.007064335
+  [t= 245.1s] SYNC  offset=+1015.329ms  |  correction=+6564.335ppm
+  [t= 250.1s] SYNC  offset= +984.917ms  |  correction=+6193.323ppm
+  [t= 251.5s] STATUS  clock=1769292969.951727  |  rate=1.006653315
+  [t= 255.1s] SYNC  offset= +952.136ms  |  correction=+6153.315ppm
+  [t= 260.1s] SYNC  offset= +918.471ms  |  correction=+5941.907ppm
+  [t= 261.5s] STATUS  clock=1769292980.016457  |  rate=1.006136505
+  [t= 265.1s] SYNC  offset= +891.226ms  |  correction=+5636.505ppm
+  [t= 270.1s] SYNC  offset= +856.000ms  |  correction=+5616.638ppm
+  [t= 271.6s] STATUS  clock=1769292990.177507  |  rate=1.005639530
+  [t= 275.1s] SYNC  offset= +883.142ms  |  correction=+5139.530ppm
+  [t= 280.1s] SYNC  offset= +786.674ms  |  correction=+7821.045ppm
+  [t= 281.7s] STATUS  clock=1769293000.346607  |  rate=1.004677344
+  [t= 285.1s] SYNC  offset= +762.363ms  |  correction=+4177.344ppm
+  [t= 290.1s] SYNC  offset= +742.991ms  |  correction=+4113.452ppm
+  [t= 291.8s] STATUS  clock=1769293010.493272  |  rate=1.004759612
+  [t= 295.1s] SYNC  offset= +715.869ms  |  correction=+4259.612ppm
+
+==========================================================================================
+  COMPLETE: Sync=5s (Stable)
+  Success rate: 98.3%
+  Sync points: 58
+  Final offset: +715.869 ms
+==========================================================================================
+
+
+==========================================================================================
+  NTP - Sync=5s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):      461.574 ms
+    Mean |offset|:          2254.371 ms
+    RMS offset:             3459.469 ms
+    Max |offset|:           17891.361 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          3428.539 ms
+    Steady-state jitter:     173.816 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/NTP/NTP_Sync=5s_(Stable).csv
+
+Preparing: Sync=10s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=10s (Stable)
+  Protocol: NTP
+  Duration: 300s | Sync: 10.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769293047.452596  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17892.134ms  |  correction=   +0.000ppm
+  [t=  18.0s] STATUS  clock=1769293049.993930  |  rate=0.079058826
+  [t=  20.0s] SYNC  offset=-8683.782ms  |  correction=-921441.174ppm
+  [t=  28.1s] STATUS  clock=1769293054.461027  |  rate=0.526449559
+  [t=  30.0s] SYNC  offset=-3947.800ms  |  correction=-474050.441ppm
+  [t=  38.2s] STATUS  clock=1769293061.694432  |  rate=0.757324900
+  [t=  40.0s] SYNC  offset=-1517.730ms  |  correction=-243175.100ppm
+  [t=  48.3s] STATUS  clock=1769293070.344904  |  rate=0.876551846
+  [t=  50.0s] SYNC  offset= -284.793ms  |  correction=-123948.154ppm
+  [t=  58.3s] STATUS  clock=1769293079.624669  |  rate=0.937771507
+  [t=  60.0s] SYNC  offset= +340.010ms  |  correction=-62728.493ppm
+  [t=  68.4s] STATUS  clock=1769293089.366030  |  rate=0.969521656
+  [t=  70.1s] SYNC  offset= +646.351ms  |  correction=-30978.344ppm
+  [t=  78.5s] STATUS  clock=1769293099.296606  |  rate=0.985808668
+  [t=  80.0s] SYNC  offset= +786.159ms  |  correction=-14691.332ppm
+  [t=  88.6s] STATUS  clock=1769293109.324357  |  rate=0.993978299
+  [t=  90.1s] SYNC  offset= +849.131ms  |  correction=-6521.701ppm
+  [t=  98.7s] STATUS  clock=1769293119.401991  |  rate=0.998400886
+  [t= 100.1s] SYNC  offset= +936.695ms  |  correction=-2099.114ppm
+  [t= 108.8s] STATUS  clock=1769293129.536741  |  rate=1.004184691
+  [t= 110.1s] SYNC  offset= +819.669ms  |  correction=+3684.691ppm
+  [t= 118.9s] STATUS  clock=1769293139.637873  |  rate=0.999562874
+  [t= 120.1s] SYNC  offset= +823.235ms  |  correction= -937.126ppm
+  [t= 129.0s] STATUS  clock=1769293149.746166  |  rate=1.000976365
+  [t= 130.1s] SYNC  offset= +822.019ms  |  correction= +476.365ppm
+  [t= 139.1s] STATUS  clock=1769293159.866685  |  rate=1.002148181
+  [t= 140.1s] SYNC  offset= +795.773ms  |  correction=+1648.181ppm
+  [t= 149.2s] STATUS  clock=1769293169.987248  |  rate=1.002029272
+  [t= 150.1s] SYNC  offset= +775.471ms  |  correction=+1529.272ppm
+  [t= 159.2s] STATUS  clock=1769293180.008914  |  rate=1.002176998
+  [t= 160.1s] SYNC  offset= +753.917ms  |  correction=+1676.998ppm
+  [t= 169.3s] STATUS  clock=1769293190.131385  |  rate=1.002230056
+  [t= 170.1s] SYNC  offset= +727.606ms  |  correction=+1730.056ppm
+  [t= 179.4s] STATUS  clock=1769293200.251788  |  rate=1.002005875
+  [t= 180.1s] SYNC  offset= +719.689ms  |  correction=+1505.875ppm
+  [t= 189.5s] STATUS  clock=1769293210.378536  |  rate=1.002689327
+  [t= 190.1s] SYNC  offset= +685.415ms  |  correction=+2189.327ppm
+  [t= 199.6s] STATUS  clock=1769293220.499085  |  rate=1.002004036
+  [t= 200.1s] SYNC  offset= +665.916ms  |  correction=+1504.036ppm
+  [t= 209.6s] STATUS  clock=1769293230.519363  |  rate=1.002027938
+  [t= 210.1s] SYNC  offset= +642.915ms  |  correction=+1527.938ppm
+  [t= 219.7s] STATUS  clock=1769293240.638002  |  rate=1.001842597
+  [t= 220.1s] SYNC  offset= +623.113ms  |  correction=+1342.597ppm
+  [t= 229.7s] STATUS  clock=1769293250.655919  |  rate=1.001786999
+  [t= 230.1s] SYNC  offset= +604.622ms  |  correction=+1286.999ppm
+  [t= 239.8s] STATUS  clock=1769293260.773777  |  rate=1.001769132
+  [t= 240.1s] SYNC  offset= +614.189ms  |  correction=+1269.132ppm
+  [t= 249.9s] STATUS  clock=1769293270.905493  |  rate=1.003168753
+  [t= 250.1s] SYNC  offset= +559.860ms  |  correction=+2668.753ppm
+  [t= 260.0s] STATUS  clock=1769293281.018681  |  rate=1.001292343
+  [t= 260.1s] SYNC  offset= +546.263ms  |  correction= +792.343ppm
+  [t= 270.0s] STATUS  clock=1769293291.033021  |  rate=1.001432205
+  [t= 270.1s] SYNC  offset= +528.342ms  |  correction= +932.205ppm
+  [t= 280.0s] STATUS  clock=1769293301.046326  |  rate=1.001329008
+  [t= 280.1s] SYNC  offset= +519.217ms  |  correction= +829.008ppm
+  [t= 290.1s] SYNC  offset= +502.962ms  |  correction=+1151.375ppm
+  [t= 290.1s] STATUS  clock=1769293311.162964  |  rate=1.001592883
+
+==========================================================================================
+  COMPLETE: Sync=10s (Stable)
+  Success rate: 98.9%
+  Sync points: 29
+  Final offset: +502.962 ms
+==========================================================================================
+
+
+==========================================================================================
+  NTP - Sync=10s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -553.024 ms
+    Mean |offset|:          1676.372 ms
+    RMS offset:             3828.221 ms
+    Max |offset|:           17892.134 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          3788.065 ms
+    Steady-state jitter:      48.015 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/NTP/NTP_Sync=10s_(Stable).csv
+
+Preparing: Sync=20s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=20s (Stable)
+  Protocol: NTP
+  Duration: 300s | Sync: 20.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769293349.584517  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17893.516ms  |  correction=   +0.000ppm
+  [t=  18.1s] STATUS  clock=1769293352.133129  |  rate=0.078984128
+  [t=  28.1s] STATUS  clock=1769293352.922971  |  rate=0.078984128
+  [t=  30.0s] SYNC  offset= +547.086ms  |  correction=-921515.872ppm
+  [t=  38.2s] STATUS  clock=1769293361.380347  |  rate=1.001834885
+  [t=  48.3s] STATUS  clock=1769293371.498866  |  rate=1.001834885
+  [t=  50.0s] SYNC  offset= +529.193ms  |  correction=+1334.885ppm
+  [t=  58.3s] STATUS  clock=1769293381.516417  |  rate=1.001736516
+  [t=  68.4s] STATUS  clock=1769293391.633881  |  rate=1.001736516
+  [t=  70.0s] SYNC  offset= +456.469ms  |  correction=+1236.516ppm
+  [t=  78.4s] STATUS  clock=1769293401.626473  |  rate=0.998784944
+  [t=  88.4s] STATUS  clock=1769293411.614371  |  rate=0.998784944
+  [t=  90.1s] SYNC  offset= +480.060ms  |  correction=-1715.056ppm
+  [t=  98.5s] STATUS  clock=1769293421.717885  |  rate=1.000684835
+  [t= 108.6s] STATUS  clock=1769293431.824798  |  rate=1.000684835
+  [t= 110.1s] SYNC  offset= +468.357ms  |  correction= +184.835ppm
+  [t= 118.6s] STATUS  clock=1769293441.832658  |  rate=1.000802333
+  [t= 128.7s] STATUS  clock=1769293451.940738  |  rate=1.000802333
+  [t= 130.1s] SYNC  offset= +453.043ms  |  correction= +302.333ppm
+  [t= 138.7s] STATUS  clock=1769293461.948012  |  rate=1.000716224
+  [t= 148.8s] STATUS  clock=1769293472.055226  |  rate=1.000716224
+  [t= 150.1s] SYNC  offset= +436.267ms  |  correction= +216.224ppm
+  [t= 158.8s] STATUS  clock=1769293482.061024  |  rate=1.000531860
+  [t= 168.9s] STATUS  clock=1769293492.166387  |  rate=1.000531860
+  [t= 170.1s] SYNC  offset= +455.042ms  |  correction=  +31.860ppm
+  [t= 179.0s] STATUS  clock=1769293502.286009  |  rate=1.002152948
+  [t= 189.0s] STATUS  clock=1769293512.307552  |  rate=1.002152948
+  [t= 190.1s] SYNC  offset= +382.510ms  |  correction=+1652.948ppm
+  [t= 199.0s] STATUS  clock=1769293522.301640  |  rate=0.999100247
+  [t= 209.1s] STATUS  clock=1769293532.392552  |  rate=0.999100247
+  [t= 210.1s] SYNC  offset= +415.319ms  |  correction=-1399.753ppm
+  [t= 219.2s] STATUS  clock=1769293542.504261  |  rate=1.001363844
+  [t= 229.3s] STATUS  clock=1769293552.618044  |  rate=1.001363844
+  [t= 230.0s] SYNC  offset= +375.105ms  |  correction= +863.844ppm
+  [t= 239.4s] STATUS  clock=1769293562.718071  |  rate=0.999917949
+  [t= 249.5s] STATUS  clock=1769293572.817204  |  rate=0.999917949
+  [t= 250.1s] SYNC  offset= +374.787ms  |  correction= -582.051ppm
+  [t= 259.5s] STATUS  clock=1769293582.821885  |  rate=1.000464282
+  [t= 269.6s] STATUS  clock=1769293592.926302  |  rate=1.000464282
+  [t= 270.1s] SYNC  offset= +366.115ms  |  correction=  -35.718ppm
+  [t= 279.7s] STATUS  clock=1769293603.032100  |  rate=1.000580239
+  [t= 289.8s] STATUS  clock=1769293613.137938  |  rate=1.000580239
+  [t= 290.1s] SYNC  offset= +354.842ms  |  correction=  +80.239ppm
+  [t= 299.9s] STATUS  clock=1769293623.243411  |  rate=1.000548833
+
+==========================================================================================
+  COMPLETE: Sync=20s (Stable)
+  Success rate: 99.0%
+  Sync points: 15
+  Final offset: +354.842 ms
+==========================================================================================
+
+
+==========================================================================================
+  NTP - Sync=20s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -786.621 ms
+    Mean |offset|:          1599.181 ms
+    RMS offset:             4639.526 ms
+    Max |offset|:           17893.516 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          4572.355 ms
+    Steady-state jitter:      20.426 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/NTP/NTP_Sync=20s_(Stable).csv
+
+Preparing: Sync=30s (Stable)
+[NTP] Rotating to server: time.cloudflare.com
+  [NTP] Query failed (1/3): NTP timeout: 1.pt.pool.ntp.org
+
+==========================================================================================
+  EXPERIMENT: Sync=30s (Stable)
+  Protocol: NTP
+  Duration: 300s | Sync: 30.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769293656.719018  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17873.430ms  |  correction=   +0.000ppm
+  [t=  18.1s] STATUS  clock=1769293659.275827  |  rate=0.080018751
+  [t=  28.2s] STATUS  clock=1769293660.084016  |  rate=0.080018751
+  [t=  38.2s] STATUS  clock=1769293660.884205  |  rate=0.080018751
+  [t=  40.0s] SYNC  offset=+9704.445ms  |  correction=-920481.249ppm
+  [t=  48.3s] STATUS  clock=1769293673.397358  |  rate=1.473468341
+  [t=  58.4s] STATUS  clock=1769293688.279346  |  rate=1.473468341
+  [t=  68.4s] STATUS  clock=1769293703.014043  |  rate=1.473468341
+  [t=  70.1s] SYNC  offset=-4544.895ms  |  correction=+472968.341ppm
+  [t=  78.5s] STATUS  clock=1769293711.782149  |  rate=0.754183600
+  [t=  88.6s] STATUS  clock=1769293719.399383  |  rate=0.754183600
+  [t=  98.7s] STATUS  clock=1769293727.016644  |  rate=0.754183600
+  [t= 100.1s] SYNC  offset=+2828.665ms  |  correction=-246316.400ppm
+  [t= 108.8s] STATUS  clock=1769293737.915572  |  rate=1.127103314
+  [t= 118.9s] STATUS  clock=1769293749.299338  |  rate=1.127103314
+  [t= 129.0s] STATUS  clock=1769293760.683009  |  rate=1.127103314
+  [t= 130.1s] SYNC  offset= -981.574ms  |  correction=+126603.314ppm
+  [t= 139.0s] STATUS  clock=1769293770.226195  |  rate=0.935119422
+  [t= 149.1s] STATUS  clock=1769293779.670902  |  rate=0.935119422
+  [t= 159.2s] STATUS  clock=1769293789.115582  |  rate=0.935119422
+  [t= 160.1s] SYNC  offset= +964.719ms  |  correction=-65380.578ppm
+  [t= 169.3s] STATUS  clock=1769293799.478741  |  rate=1.033881010
+  [t= 179.4s] STATUS  clock=1769293809.920972  |  rate=1.033881010
+  [t= 189.5s] STATUS  clock=1769293820.363215  |  rate=1.033881010
+  [t= 190.1s] SYNC  offset=  -31.534ms  |  correction=+33381.010ppm
+  [t= 199.6s] STATUS  clock=1769293830.326757  |  rate=0.984021035
+  [t= 209.7s] STATUS  clock=1769293840.265348  |  rate=0.984021035
+  [t= 219.7s] STATUS  clock=1769293850.105581  |  rate=0.984021035
+  [t= 220.1s] SYNC  offset= +444.390ms  |  correction=-16478.965ppm
+  [t= 229.7s] STATUS  clock=1769293860.183168  |  rate=1.008483528
+  [t= 239.7s] STATUS  clock=1769293870.268555  |  rate=1.008483528
+  [t= 249.8s] STATUS  clock=1769293880.453556  |  rate=1.008483528
+  [t= 250.1s] SYNC  offset= +174.093ms  |  correction=+7983.528ppm
+  [t= 259.9s] STATUS  clock=1769293890.508551  |  rate=0.995229340
+  [t= 270.0s] STATUS  clock=1769293900.559782  |  rate=0.995229340
+  [t= 280.1s] SYNC  offset= +314.606ms  |  correction=-5270.660ppm
+  [t= 280.1s] STATUS  clock=1769293910.612345  |  rate=1.002726939
+  [t= 290.1s] STATUS  clock=1769293920.640083  |  rate=1.002726939
+
+==========================================================================================
+  COMPLETE: Sync=30s (Stable)
+  Success rate: 98.3%
+  Sync points: 10
+  Final offset: +314.606 ms
+==========================================================================================
+
+
+==========================================================================================
+  NTP - Sync=30s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -900.052 ms
+    Mean |offset|:          3786.235 ms
+    RMS offset:             6667.197 ms
+    Max |offset|:           17873.430 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          6606.165 ms
+    Steady-state jitter:     110.377 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/NTP/NTP_Sync=30s_(Stable).csv
+
+==================================================================================================================================
+  NTP - Results Summary
+==================================================================================================================================
+Variation         | Mean (ms) | RMS (ms) | Max (ms)  | StdDev (ms) | Jitter (ms) | Conv (s) | Settle (s)
+----------------------------------------------------------------------------------------------------------
+Sync=5s (Stable)  | 461.574   | 3459.469 | 17891.361 | 3428.539    | 173.816     | N/A      | N/A       
+Sync=10s (Stable) | -553.024  | 3828.221 | 17892.134 | 3788.065    | 48.015      | N/A      | N/A       
+Sync=20s (Stable) | -786.621  | 4639.526 | 17893.516 | 4572.355    | 20.426      | N/A      | N/A       
+Sync=30s (Stable) | -900.052  | 6667.197 | 17873.430 | 6606.165    | 110.377     | N/A      | N/A       
+==================================================================================================================================
+
+
+Preparing: Sync=5s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=5s (Stable)
+  Protocol: PTP
+  Duration: 300s | Sync: 5.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769293959.543147  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17791.359ms  |  correction=   +0.000ppm
+  [t=  15.0s] SYNC  offset=-13212.357ms  |  correction=-916254.031ppm
+  [t=  18.0s] STATUS  clock=1769293962.774848  |  rate=0.293381541
+  [t=  20.0s] SYNC  offset=-9680.555ms  |  correction=-707118.459ppm
+  [t=  25.0s] SYNC  offset=-6954.984ms  |  correction=-545054.525ppm
+  [t=  28.1s] STATUS  clock=1769293967.469642  |  rate=0.581293631
+  [t=  30.0s] SYNC  offset=-4865.407ms  |  correction=-419206.369ppm
+  [t=  35.0s] SYNC  offset=-3257.118ms  |  correction=-322024.958ppm
+  [t=  38.2s] STATUS  clock=1769293974.396552  |  rate=0.754004520
+  [t=  40.1s] SYNC  offset=-2001.680ms  |  correction=-246495.480ppm
+  [t=  45.0s] SYNC  offset=-1088.352ms  |  correction=-186727.448ppm
+  [t=  48.3s] STATUS  clock=1769293982.657748  |  rate=0.857806481
+  [t=  50.1s] SYNC  offset= -364.004ms  |  correction=-142693.519ppm
+  [t=  55.0s] SYNC  offset= +157.579ms  |  correction=-107022.330ppm
+  [t=  58.3s] STATUS  clock=1769293991.621384  |  rate=0.919793277
+  [t=  60.1s] SYNC  offset= +566.387ms  |  correction=-80706.723ppm
+  [t=  65.1s] SYNC  offset= +861.609ms  |  correction=-59416.478ppm
+  [t=  68.4s] STATUS  clock=1769294001.144710  |  rate=0.957137582
+  [t=  70.1s] SYNC  offset=+1075.730ms  |  correction=-43362.418ppm
+  [t=  75.1s] SYNC  offset=+1226.822ms  |  correction=-31042.282ppm
+  [t=  78.5s] STATUS  clock=1769294010.949341  |  rate=0.978852131
+  [t=  80.1s] SYNC  offset=+1336.180ms  |  correction=-21647.869ppm
+  [t=  85.1s] SYNC  offset=+1402.279ms  |  correction=-14175.712ppm
+  [t=  88.5s] STATUS  clock=1769294020.820328  |  rate=0.991733531
+  [t=  90.1s] SYNC  offset=+1442.588ms  |  correction=-8766.469ppm
+  [t=  95.1s] SYNC  offset=+1464.301ms  |  correction=-4586.627ppm
+  [t=  98.6s] STATUS  clock=1769294030.884556  |  rate=0.999194917
+  [t= 100.1s] SYNC  offset=+1469.059ms  |  correction=-1305.083ppm
+  [t= 105.1s] SYNC  offset=+1459.928ms  |  correction=+1137.551ppm
+  [t= 108.6s] STATUS  clock=1769294040.903768  |  rate=1.003370469
+  [t= 110.1s] SYNC  offset=+1441.964ms  |  correction=+2870.469ppm
+  [t= 115.1s] SYNC  offset=+1420.652ms  |  correction=+4134.225ppm
+  [t= 118.7s] STATUS  clock=1769294051.052759  |  rate=1.005700263
+  [t= 120.1s] SYNC  offset=+1391.196ms  |  correction=+5200.263ppm
+  [t= 125.1s] SYNC  offset=+1359.245ms  |  correction=+5813.822ppm
+  [t= 128.8s] STATUS  clock=1769294061.217397  |  rate=1.006754645
+  [t= 130.1s] SYNC  offset=+1324.743ms  |  correction=+6254.645ppm
+  [t= 135.1s] SYNC  offset=+1292.154ms  |  correction=+6517.289ppm
+  [t= 138.9s] STATUS  clock=1769294071.389156  |  rate=1.007325495
+  [t= 140.1s] SYNC  offset=+1253.319ms  |  correction=+6825.495ppm
+  [t= 145.1s] SYNC  offset=+1217.553ms  |  correction=+6763.288ppm
+  [t= 149.0s] STATUS  clock=1769294081.562721  |  rate=1.007301981
+  [t= 150.1s] SYNC  offset=+1182.131ms  |  correction=+6801.981ppm
+  [t= 155.1s] SYNC  offset=+1144.804ms  |  correction=+6804.747ppm
+  [t= 159.1s] STATUS  clock=1769294091.735876  |  rate=1.007155091
+  [t= 160.1s] SYNC  offset=+1110.972ms  |  correction=+6655.091ppm
+  [t= 165.1s] SYNC  offset=+1074.241ms  |  correction=+6629.848ppm
+  [t= 169.2s] STATUS  clock=1769294101.906934  |  rate=1.006905386
+  [t= 170.1s] SYNC  offset=+1038.549ms  |  correction=+6405.386ppm
+  [t= 175.1s] SYNC  offset=+1005.591ms  |  correction=+6179.213ppm
+  [t= 179.2s] STATUS  clock=1769294111.973332  |  rate=1.006539732
+  [t= 180.1s] SYNC  offset= +973.640ms  |  correction=+6039.732ppm
+  [t= 185.1s] SYNC  offset= +941.096ms  |  correction=+5903.153ppm
+  [t= 189.3s] STATUS  clock=1769294122.137149  |  rate=1.006187698
+  [t= 190.1s] SYNC  offset= +908.695ms  |  correction=+5687.698ppm
+  [t= 195.1s] SYNC  offset= +882.561ms  |  correction=+5430.338ppm
+  [t= 199.3s] STATUS  clock=1769294132.196726  |  rate=1.005947185
+  [t= 200.1s] SYNC  offset= +851.646ms  |  correction=+5447.185ppm
+  [t= 205.1s] SYNC  offset= +823.991ms  |  correction=+5178.594ppm
+  [t= 209.4s] STATUS  clock=1769294142.353609  |  rate=1.005531507
+  [t= 210.1s] SYNC  offset= +795.519ms  |  correction=+5031.507ppm
+  [t= 215.1s] SYNC  offset= +771.665ms  |  correction=+4801.147ppm
+  [t= 219.5s] STATUS  clock=1769294152.507118  |  rate=1.005265252
+  [t= 220.1s] SYNC  offset= +743.159ms  |  correction=+4765.252ppm
+  [t= 225.1s] SYNC  offset= +717.961ms  |  correction=+4454.462ppm
+  [t= 229.6s] STATUS  clock=1769294162.656420  |  rate=1.004771090
+  [t= 230.1s] SYNC  offset= +694.042ms  |  correction=+4271.090ppm
+  [t= 235.1s] SYNC  offset= +671.383ms  |  correction=+4116.191ppm
+  [t= 239.6s] STATUS  clock=1769294172.702074  |  rate=1.004490676
+  [t= 240.1s] SYNC  offset= +647.784ms  |  correction=+3990.676ppm
+  [t= 245.1s] SYNC  offset= +626.001ms  |  correction=+3781.936ppm
+  [t= 249.6s] STATUS  clock=1769294182.744318  |  rate=1.004132200
+  [t= 250.1s] SYNC  offset= +607.799ms  |  correction=+3632.200ppm
+  [t= 255.1s] SYNC  offset= +585.906ms  |  correction=+3634.231ppm
+  [t= 259.7s] STATUS  clock=1769294192.885014  |  rate=1.003918228
+  [t= 260.1s] SYNC  offset= +566.575ms  |  correction=+3418.228ppm
+  [t= 265.1s] SYNC  offset= +547.368ms  |  correction=+3301.848ppm
+  [t= 269.7s] STATUS  clock=1769294202.922433  |  rate=1.003662354
+  [t= 270.1s] SYNC  offset= +528.718ms  |  correction=+3162.354ppm
+  [t= 275.1s] SYNC  offset= +511.369ms  |  correction=+3023.215ppm
+  [t= 279.8s] STATUS  clock=1769294213.057537  |  rate=1.003423042
+  [t= 280.1s] SYNC  offset= +494.342ms  |  correction=+2923.042ppm
+  [t= 285.1s] SYNC  offset= +478.516ms  |  correction=+2813.057ppm
+  [t= 289.9s] STATUS  clock=1769294223.190681  |  rate=1.003239270
+  [t= 290.1s] SYNC  offset= +461.200ms  |  correction=+2739.270ppm
+  [t= 295.1s] SYNC  offset= +448.087ms  |  correction=+2565.098ppm
+  [t= 300.0s] STATUS  clock=1769294233.321720  |  rate=1.003081865
+
+==========================================================================================
+  COMPLETE: Sync=5s (Stable)
+  Success rate: 100.0%
+  Sync points: 58
+  Final offset: +448.087 ms
+==========================================================================================
+
+
+==========================================================================================
+  PTP - Sync=5s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -227.883 ms
+    Mean |offset|:          1814.042 ms
+    RMS offset:             3528.196 ms
+    Max |offset|:           17791.359 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          3520.828 ms
+    Steady-state jitter:     106.413 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/PTP/PTP_Sync=5s_(Stable).csv
+
+Preparing: Sync=10s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=10s (Stable)
+  Protocol: PTP
+  Duration: 300s | Sync: 10.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769294261.779759  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17791.412ms  |  correction=   +0.000ppm
+  [t=  18.1s] STATUS  clock=1769294264.371515  |  rate=0.084246144
+  [t=  20.0s] SYNC  offset=-8633.919ms  |  correction=-916253.856ppm
+  [t=  28.1s] STATUS  clock=1769294268.862373  |  rate=0.529171768
+  [t=  30.0s] SYNC  offset=-3925.764ms  |  correction=-471328.232ppm
+  [t=  38.2s] STATUS  clock=1769294276.111975  |  rate=0.758687623
+  [t=  40.0s] SYNC  offset=-1513.110ms  |  correction=-241812.377ppm
+  [t=  48.3s] STATUS  clock=1769294284.768942  |  rate=0.877050483
+  [t=  50.0s] SYNC  offset= -283.134ms  |  correction=-123449.517ppm
+  [t=  58.4s] STATUS  clock=1769294294.146295  |  rate=0.938124422
+  [t=  60.0s] SYNC  offset= +335.331ms  |  correction=-62375.578ppm
+  [t=  68.5s] STATUS  clock=1769294303.891601  |  rate=0.969550658
+  [t=  70.0s] SYNC  offset= +639.211ms  |  correction=-30949.342ppm
+  [t=  78.5s] STATUS  clock=1769294313.726029  |  rate=0.985703502
+  [t=  80.0s] SYNC  offset= +783.115ms  |  correction=-14796.498ppm
+  [t=  88.6s] STATUS  clock=1769294323.754440  |  rate=0.994073411
+  [t=  90.1s] SYNC  offset= +842.695ms  |  correction=-6426.589ppm
+  [t=  98.7s] STATUS  clock=1769294333.831493  |  rate=0.998315999
+  [t= 100.0s] SYNC  offset= +859.599ms  |  correction=-2184.001ppm
+  [t= 108.8s] STATUS  clock=1769294343.933425  |  rate=1.000451155
+  [t= 110.1s] SYNC  offset= +855.081ms  |  correction=  -48.845ppm
+  [t= 118.8s] STATUS  clock=1769294353.947310  |  rate=1.001508385
+  [t= 120.1s] SYNC  offset= +839.520ms  |  correction=+1008.385ppm
+  [t= 128.9s] STATUS  clock=1769294364.066771  |  rate=1.001989101
+  [t= 130.1s] SYNC  offset= +819.587ms  |  correction=+1489.101ppm
+  [t= 139.0s] STATUS  clock=1769294374.188903  |  rate=1.002222209
+  [t= 140.1s] SYNC  offset= +799.196ms  |  correction=+1722.209ppm
+  [t= 149.0s] STATUS  clock=1769294384.212785  |  rate=1.002401926
+  [t= 150.1s] SYNC  offset= +773.632ms  |  correction=+1901.926ppm
+  [t= 159.1s] STATUS  clock=1769294394.335958  |  rate=1.002284537
+  [t= 160.1s] SYNC  offset= +750.500ms  |  correction=+1784.537ppm
+  [t= 169.2s] STATUS  clock=1769294404.458738  |  rate=1.002253945
+  [t= 170.1s] SYNC  offset= +729.155ms  |  correction=+1753.945ppm
+  [t= 179.3s] STATUS  clock=1769294414.581707  |  rate=1.002280424
+  [t= 180.1s] SYNC  offset= +704.771ms  |  correction=+1780.424ppm
+  [t= 189.3s] STATUS  clock=1769294424.603027  |  rate=1.002118405
+  [t= 190.1s] SYNC  offset= +683.866ms  |  correction=+1618.405ppm
+  [t= 199.4s] STATUS  clock=1769294434.724232  |  rate=1.002099005
+  [t= 200.1s] SYNC  offset= +664.200ms  |  correction=+1599.005ppm
+  [t= 209.5s] STATUS  clock=1769294444.845504  |  rate=1.002111828
+  [t= 210.1s] SYNC  offset= +642.073ms  |  correction=+1611.828ppm
+  [t= 219.5s] STATUS  clock=1769294454.865287  |  rate=1.001968342
+  [t= 220.1s] SYNC  offset= +622.362ms  |  correction=+1468.342ppm
+  [t= 229.6s] STATUS  clock=1769294464.984635  |  rate=1.001916148
+  [t= 230.1s] SYNC  offset= +604.299ms  |  correction=+1416.148ppm
+  [t= 239.6s] STATUS  clock=1769294475.003847  |  rate=1.001919394
+  [t= 240.1s] SYNC  offset= +582.048ms  |  correction=+1419.394ppm
+  [t= 249.7s] STATUS  clock=1769294485.120881  |  rate=1.001680126
+  [t= 250.1s] SYNC  offset= +567.745ms  |  correction=+1180.126ppm
+  [t= 259.8s] STATUS  clock=1769294495.239174  |  rate=1.001816718
+  [t= 260.1s] SYNC  offset= +549.679ms  |  correction=+1316.718ppm
+  [t= 269.8s] STATUS  clock=1769294505.256589  |  rate=1.001737859
+  [t= 270.1s] SYNC  offset= +531.552ms  |  correction=+1237.859ppm
+  [t= 279.9s] STATUS  clock=1769294515.373038  |  rate=1.001629048
+  [t= 280.1s] SYNC  offset= +515.919ms  |  correction=+1129.048ppm
+  [t= 290.0s] STATUS  clock=1769294525.489376  |  rate=1.001621239
+  [t= 290.1s] SYNC  offset= +499.905ms  |  correction=+1121.239ppm
+  [t= 300.0s] STATUS  clock=1769294535.505118  |  rate=1.001570662
+
+==========================================================================================
+  COMPLETE: Sync=10s (Stable)
+  Success rate: 100.0%
+  Sync points: 29
+  Final offset: +499.905 ms
+==========================================================================================
+
+
+==========================================================================================
+  PTP - Sync=10s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -550.079 ms
+    Mean |offset|:          1666.979 ms
+    RMS offset:             3806.598 ms
+    Max |offset|:           17791.412 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          3766.644 ms
+    Steady-state jitter:      45.909 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/PTP/PTP_Sync=10s_(Stable).csv
+
+Preparing: Sync=20s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=20s (Stable)
+  Protocol: PTP
+  Duration: 300s | Sync: 20.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769294564.011419  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17792.276ms  |  correction=   +0.000ppm
+  [t=  18.0s] STATUS  clock=1769294566.594406  |  rate=0.084196111
+  [t=  28.1s] STATUS  clock=1769294567.444786  |  rate=0.084196111
+  [t=  30.0s] SYNC  offset= +523.601ms  |  correction=-916303.889ppm
+  [t=  38.1s] STATUS  clock=1769294575.802693  |  rate=1.000775107
+  [t=  48.2s] STATUS  clock=1769294585.910497  |  rate=1.000775107
+  [t=  50.1s] SYNC  offset= +507.782ms  |  correction= +275.107ppm
+  [t=  58.3s] STATUS  clock=1769294596.018082  |  rate=1.000746105
+  [t=  68.4s] STATUS  clock=1769294606.125561  |  rate=1.000746105
+  [t=  70.0s] SYNC  offset= +494.465ms  |  correction= +246.105ppm
+  [t=  78.4s] STATUS  clock=1769294616.133711  |  rate=1.000821868
+  [t=  88.5s] STATUS  clock=1769294626.242000  |  rate=1.000821868
+  [t=  90.0s] SYNC  offset= +476.819ms  |  correction= +321.868ppm
+  [t=  98.6s] STATUS  clock=1769294636.348851  |  rate=1.000654927
+  [t= 108.6s] STATUS  clock=1769294646.355407  |  rate=1.000654927
+  [t= 110.1s] SYNC  offset= +463.739ms  |  correction= +154.927ppm
+  [t= 118.7s] STATUS  clock=1769294656.462353  |  rate=1.000696740
+  [t= 128.7s] STATUS  clock=1769294666.469319  |  rate=1.000696740
+  [t= 130.1s] SYNC  offset= +449.291ms  |  correction= +196.740ppm
+  [t= 138.8s] STATUS  clock=1769294676.575922  |  rate=1.000648285
+  [t= 148.9s] STATUS  clock=1769294686.682463  |  rate=1.000648285
+  [t= 150.1s] SYNC  offset= +436.662ms  |  correction= +148.285ppm
+  [t= 159.0s] STATUS  clock=1769294696.789220  |  rate=1.000671767
+  [t= 169.1s] STATUS  clock=1769294706.895996  |  rate=1.000671767
+  [t= 170.1s] SYNC  offset= +422.867ms  |  correction= +171.767ppm
+  [t= 179.2s] STATUS  clock=1769294717.002268  |  rate=1.000616530
+  [t= 189.3s] STATUS  clock=1769294727.108494  |  rate=1.000616530
+  [t= 190.1s] SYNC  offset= +411.043ms  |  correction= +116.530ppm
+  [t= 199.4s] STATUS  clock=1769294737.214927  |  rate=1.000641786
+  [t= 209.5s] STATUS  clock=1769294747.321413  |  rate=1.000641786
+  [t= 210.1s] SYNC  offset= +399.658ms  |  correction= +141.786ppm
+  [t= 219.6s] STATUS  clock=1769294757.428138  |  rate=1.000671900
+  [t= 229.6s] STATUS  clock=1769294767.434880  |  rate=1.000671900
+  [t= 230.1s] SYNC  offset= +384.649ms  |  correction= +171.900ppm
+  [t= 239.7s] STATUS  clock=1769294777.539947  |  rate=1.000498599
+  [t= 249.8s] STATUS  clock=1769294787.645013  |  rate=1.000498599
+  [t= 250.1s] SYNC  offset= +374.629ms  |  correction=   -1.401ppm
+  [t= 259.9s] STATUS  clock=1769294797.750615  |  rate=1.000559416
+  [t= 269.9s] STATUS  clock=1769294807.756225  |  rate=1.000559416
+  [t= 270.1s] SYNC  offset= +363.955ms  |  correction=  +59.416ppm
+  [t= 280.0s] STATUS  clock=1769294817.862014  |  rate=1.000571812
+  [t= 290.1s] SYNC  offset= +352.479ms  |  correction=  +71.812ppm
+  [t= 290.1s] STATUS  clock=1769294827.967761  |  rate=1.000526647
+
+==========================================================================================
+  COMPLETE: Sync=20s (Stable)
+  Success rate: 100.0%
+  Sync points: 15
+  Final offset: +352.479 ms
+==========================================================================================
+
+
+==========================================================================================
+  PTP - Sync=20s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -782.043 ms
+    Mean |offset|:          1590.261 ms
+    RMS offset:             4613.235 ms
+    Max |offset|:           17792.276 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          4546.465 ms
+    Steady-state jitter:      16.312 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/PTP/PTP_Sync=20s_(Stable).csv
+
+Preparing: Sync=30s (Stable)
+
+==========================================================================================
+  EXPERIMENT: Sync=30s (Stable)
+  Protocol: PTP
+  Duration: 300s | Sync: 30.0s
+  Initial offset: 20.000s | Drift: 500 ppm
+==========================================================================================
+  [t=   8.0s] STATUS  clock=1769294866.241650  |  rate=1.000500000
+  [t=  10.0s] SYNC  offset=-17792.188ms  |  correction=   +0.000ppm
+  [t=  18.0s] STATUS  clock=1769294868.824702  |  rate=0.084207056
+  [t=  28.0s] STATUS  clock=1769294869.666772  |  rate=0.084207056
+  [t=  38.1s] STATUS  clock=1769294870.517262  |  rate=0.084207056
+  [t=  40.0s] SYNC  offset=+9683.822ms  |  correction=-916292.944ppm
+  [t=  48.2s] STATUS  clock=1769294882.890798  |  rate=1.472528928
+  [t=  58.3s] STATUS  clock=1769294897.763325  |  rate=1.472528928
+  [t=  68.4s] STATUS  clock=1769294912.635868  |  rate=1.472528928
+  [t=  70.1s] SYNC  offset=-4541.109ms  |  correction=+472028.928ppm
+  [t=  78.5s] STATUS  clock=1769294921.404796  |  rate=0.754467201
+  [t=  88.5s] STATUS  clock=1769294928.949496  |  rate=0.754467201
+  [t=  98.6s] STATUS  clock=1769294936.569610  |  rate=0.754467201
+  [t= 100.1s] SYNC  offset=+2825.574ms  |  correction=-246032.799ppm
+  [t= 108.7s] STATUS  clock=1769294947.431071  |  rate=1.127038413
+  [t= 118.7s] STATUS  clock=1769294958.701472  |  rate=1.127038413
+  [t= 128.8s] STATUS  clock=1769294970.084540  |  rate=1.127038413
+  [t= 130.1s] SYNC  offset= -985.708ms  |  correction=+126538.413ppm
+  [t= 138.9s] STATUS  clock=1769294979.758451  |  rate=0.934996120
+  [t= 149.0s] STATUS  clock=1769294989.201890  |  rate=0.934996120
+  [t= 159.1s] STATUS  clock=1769294998.645354  |  rate=0.934996120
+  [t= 160.1s] SYNC  offset= +965.372ms  |  correction=-65503.880ppm
+  [t= 169.2s] STATUS  clock=1769295008.999622  |  rate=1.033998296
+  [t= 179.3s] STATUS  clock=1769295019.442994  |  rate=1.033998296
+  [t= 189.4s] STATUS  clock=1769295029.886368  |  rate=1.033998296
+  [t= 190.1s] SYNC  offset=  -55.334ms  |  correction=+33498.296ppm
+  [t= 199.5s] STATUS  clock=1769295039.844069  |  rate=0.982880004
+  [t= 209.5s] STATUS  clock=1769295049.672897  |  rate=0.982880004
+  [t= 219.6s] STATUS  clock=1769295059.599943  |  rate=0.982880004
+  [t= 220.1s] SYNC  offset= +457.891ms  |  correction=-17619.996ppm
+  [t= 229.6s] STATUS  clock=1769295069.681699  |  rate=1.009228177
+  [t= 239.6s] STATUS  clock=1769295079.773993  |  rate=1.009228177
+  [t= 249.7s] STATUS  clock=1769295089.967193  |  rate=1.009228177
+  [t= 250.1s] SYNC  offset= +181.375ms  |  correction=+8728.177ppm
+  [t= 259.8s] STATUS  clock=1769295100.027562  |  rate=0.995674466
+  [t= 269.9s] STATUS  clock=1769295110.083859  |  rate=0.995674466
+  [t= 280.0s] STATUS  clock=1769295120.140170  |  rate=0.995674466
+  [t= 280.1s] SYNC  offset= +310.362ms  |  correction=-4825.534ppm
+  [t= 290.1s] STATUS  clock=1769295130.266305  |  rate=1.002589319
+
+==========================================================================================
+  COMPLETE: Sync=30s (Stable)
+  Success rate: 100.0%
+  Sync points: 10
+  Final offset: +310.362 ms
+==========================================================================================
+
+
+==========================================================================================
+  PTP - Sync=30s (Stable)
+  Initial offset: 20000.000 ms
+==========================================================================================
+  ACCURACY (closeness to true time):
+    Mean offset (bias):     -894.994 ms
+    Mean |offset|:          3779.873 ms
+    RMS offset:             6642.209 ms
+    Max |offset|:           17792.188 ms
+  
+  PRECISION (consistency/repeatability):
+    Std deviation:          6581.636 ms
+    Steady-state jitter:     112.972 ms
+  
+  CONVERGENCE:
+    Time to <1ms:           Not achieved
+    Settling time (1%):     Not achieved
+==========================================================================================
+
+  Data saved: Results/Exp2_NTP_vs_PTP/PTP/PTP_Sync=30s_(Stable).csv
+
+==================================================================================================================================
+  PTP - Results Summary
+==================================================================================================================================
+Variation         | Mean (ms) | RMS (ms) | Max (ms)  | StdDev (ms) | Jitter (ms) | Conv (s) | Settle (s)
+----------------------------------------------------------------------------------------------------------
+Sync=5s (Stable)  | -227.883  | 3528.196 | 17791.359 | 3520.828    | 106.413     | N/A      | N/A       
+Sync=10s (Stable) | -550.079  | 3806.598 | 17791.412 | 3766.644    | 45.909      | N/A      | N/A       
+Sync=20s (Stable) | -782.043  | 4613.235 | 17792.276 | 4546.465    | 16.312      | N/A      | N/A       
+Sync=30s (Stable) | -894.994  | 6642.209 | 17792.188 | 6581.636    | 112.972     | N/A      | N/A       
+==================================================================================================================================
+
+[CSV] Saved metrics: Results/Exp2_NTP_vs_PTP/Metrics/NTP_metrics.csv
+[CSV] Saved metrics: Results/Exp2_NTP_vs_PTP/Metrics/PTP_metrics.csv
+
+============================================================================================================================================
+FINAL SUMMARY: NTP vs PTP
+============================================================================================================================================
+Variation         | Accuracy NTP | Accuracy PTP | Better | Precision NTP | Precision PTP | Better | Conv NTP | Conv PTP
+-------------------------------------------------------------------------------------------------------------------------
+Sync=5s (Stable)  | 3459.469ms   | 3528.196ms   | NTP    | 3428.539ms    | 3520.828ms    | NTP    | N/A      | N/A     
+Sync=10s (Stable) | 3828.221ms   | 3806.598ms   | PTP    | 3788.065ms    | 3766.644ms    | PTP    | N/A      | N/A     
+Sync=20s (Stable) | 4639.526ms   | 4613.235ms   | PTP    | 4572.355ms    | 4546.465ms    | PTP    | N/A      | N/A     
+Sync=30s (Stable) | 6667.197ms   | 6642.209ms   | PTP    | 6606.165ms    | 6581.636ms    | PTP    | N/A      | N/A     
+============================================================================================================================================
+
+
+==========================================================================================
+  ALL EXPERIMENTS COMPLETE
+==========================================================================================
+
+loura@lourASUS-Ubuntu:~/Desktop/SDIST-Assignment$ 

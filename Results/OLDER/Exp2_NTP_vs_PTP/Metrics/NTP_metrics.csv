@@ -1,0 +1,2 @@
+variation,mean_offset_ms,mean_abs_offset_ms,rms_offset_ms,max_offset_ms,std_dev_ms,jitter_ms,convergence_s,settling_1pct_s
+Sync=5s,-463.7364796229771,2439.728219168527,4256.2875549287155,17889.98794555664,4230.949329371359,3548.617862027099,,
