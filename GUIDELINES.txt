@@ -1,4 +1,0 @@
-PTP:
-On Grandmaster Machine:     sudo ptp4l -i <interface_name> -m -S -f <path_to_ptp4l-gm.conf>
-On Slave Machine:           sudo ptp4l -i <interface_name> -m -S
-

@@ -33,7 +33,7 @@ DEFAULT_CONFIG = {
         "time.cloudflare.com",
         "pool.ntp.org"
     ],
-    "ptp_interface": "enxb6d40bb65a22",
+    "ptp_interface": "enx06094cd5783c",
     "status_interval": 10.0,
 }
 
@@ -303,16 +303,22 @@ class BaselineClock:
 # ============================================================
 @dataclass
 class SyncMetrics:
+    # Global (transient + steady-state)
     mean_offset: float
     mean_abs_offset: float
     max_abs_offset: float
     rms_offset: float
     std_dev: float
-    jitter: float
+
+    # Steady-State (SS)
+    ss_jitter: float
+    ss_mean: float
+    ss_std: float
+    ss_rms: float
+
+    # Time-domain
     convergence_time: Optional[float]
     settling_time_1pct: Optional[float]
-    steady_state_mean: float
-    steady_state_std: float
 
     @staticmethod
     def compute(offsets: List[float], times: List[float], initial_offset: float) -> Optional['SyncMetrics']:
@@ -326,16 +332,22 @@ class SyncMetrics:
         steady_arr = arr[steady_idx:]
 
         return SyncMetrics(
+            # Global metrics
             mean_offset=np.mean(arr),
             mean_abs_offset=np.mean(abs_arr),
             max_abs_offset=np.max(abs_arr),
             rms_offset=np.sqrt(np.mean(arr**2)),
             std_dev=np.std(arr),
-            jitter=np.std(steady_arr),
-            convergence_time=SyncMetrics._find_convergence(times, offsets, 0.001),
-            settling_time_1pct=SyncMetrics._find_settling(times, offsets, 1.0, initial_offset),
-            steady_state_mean=np.mean(steady_arr),
-            steady_state_std=np.std(steady_arr),
+
+            # Steady-state (SS) metrics
+            ss_jitter=np.std(steady_arr),
+            ss_mean=np.mean(steady_arr),
+            ss_std=np.std(steady_arr),
+            ss_rms=np.sqrt(np.mean(steady_arr**2)),
+
+            # Time metrics
+            convergence_time=SyncMetrics._find_convergence(times, offsets, 0.01),
+            settling_time_1pct=SyncMetrics._find_settling(times, offsets, 5.0, initial_offset),
         )
 
     @staticmethod
@@ -359,21 +371,28 @@ class SyncMetrics:
         print(f"  {title}")
         print(f"  Initial offset: {abs(initial_offset)*1000:.3f} ms")
         print(f"{'=' * 90}")
-        print(f"  ACCURACY (closeness to true time):")
+
+        print(f"  GLOBAL ACCURACY (transient + steady-state):")
         print(f"    Mean offset (bias):     {self.mean_offset*1000:8.3f} ms")
         print(f"    Mean |offset|:          {self.mean_abs_offset*1000:8.3f} ms")
         print(f"    RMS offset:             {self.rms_offset*1000:8.3f} ms")
         print(f"    Max |offset|:           {self.max_abs_offset*1000:8.3f} ms")
-        print(f"  ")
-        print(f"  PRECISION (consistency/repeatability):")
+
+        print(f"\n  GLOBAL PRECISION:")
         print(f"    Std deviation:          {self.std_dev*1000:8.3f} ms")
-        print(f"    Steady-state jitter:    {self.jitter*1000:8.3f} ms")
-        print(f"  ")
-        print(f"  CONVERGENCE:")
+
+        print(f"\n  STEADY-STATE (SS) PERFORMANCE:")
+        print(f"    SS mean offset:         {self.ss_mean*1000:8.3f} ms")
+        print(f"    SS RMS offset:          {self.ss_rms*1000:8.3f} ms")
+        print(f"    SS std deviation:       {self.ss_std*1000:8.3f} ms")
+        print(f"    SS jitter:              {self.ss_jitter*1000:8.3f} ms")
+
+        print(f"\n  CONVERGENCE:")
         conv = f"{self.convergence_time:.2f} s" if self.convergence_time else "Not achieved"
         settle = f"{self.settling_time_1pct:.2f} s" if self.settling_time_1pct else "Not achieved"
-        print(f"    Time to <1ms:           {conv}")
-        print(f"    Settling time (1%):     {settle}")
+        print(f"    Time to <10ms:           {conv}")
+        print(f"    Settling time (5%):     {settle}")
+
         print(f"{'=' * 90}\n")
 
 
@@ -638,33 +657,52 @@ def save_metrics_csv(protocol: str, results: List[Tuple[str, SyncMetrics]], save
 
     headers = [
         "variation",
+
+        # Global
         "mean_offset_ms",
         "mean_abs_offset_ms",
         "rms_offset_ms",
         "max_offset_ms",
         "std_dev_ms",
-        "jitter_ms",
+
+        # Steady-state (SS)
+        "ss_mean_ms",
+        "ss_rms_ms",
+        "ss_std_ms",
+        "ss_jitter_ms",
+
+        # Time
         "convergence_s",
-        "settling_1pct_s"
+        "settling_1pct_s",
     ]
 
     rows = []
     for name, m in results:
         rows.append([
             name,
+
+            # Global
             m.mean_offset * 1000,
             m.mean_abs_offset * 1000,
             m.rms_offset * 1000,
             m.max_abs_offset * 1000,
             m.std_dev * 1000,
-            m.jitter * 1000,
+
+            # SS
+            m.ss_mean * 1000,
+            m.ss_rms * 1000,
+            m.ss_std * 1000,
+            m.ss_jitter * 1000,
+
+            # Time
             m.convergence_time if m.convergence_time else None,
-            m.settling_time_1pct if m.settling_time_1pct else None
+            m.settling_time_1pct if m.settling_time_1pct else None,
         ])
 
     df = pd.DataFrame(rows, columns=headers)
     filepath = os.path.join(save_path, f"{protocol}_metrics.csv")
     df.to_csv(filepath, index=False)
+
     print(f"[CSV] Saved metrics: {filepath}")
     return df
 
@@ -679,11 +717,10 @@ def print_metrics_table(protocol_name: str, results: List[Tuple[str, SyncMetrics
 
     headers = [
         "Variation",
-        "Mean (ms)",
-        "RMS (ms)",
-        "Max (ms)",
-        "StdDev (ms)",
-        "Jitter (ms)",
+        "SS-RMS (ms)",
+        "SS-Jitter (ms)",
+        "SS-StdDev (ms)",
+        "Max |Offset| (ms)",
         "Conv (s)",
         "Settle (s)"
     ]
@@ -692,11 +729,10 @@ def print_metrics_table(protocol_name: str, results: List[Tuple[str, SyncMetrics
     for name, m in results:
         rows.append([
             name,
-            f"{m.mean_offset*1000:.3f}",
-            f"{m.rms_offset*1000:.3f}",
+            f"{m.ss_rms*1000:.3f}",
+            f"{m.ss_jitter*1000:.3f}",
+            f"{m.ss_std*1000:.3f}",
             f"{m.max_abs_offset*1000:.3f}",
-            f"{m.std_dev*1000:.3f}",
-            f"{m.jitter*1000:.3f}",
             f"{m.convergence_time:.2f}" if m.convergence_time else "N/A",
             f"{m.settling_time_1pct:.2f}" if m.settling_time_1pct else "N/A"
         ])
@@ -712,29 +748,29 @@ def print_final_summary(ntp_df: pd.DataFrame, ptp_df: pd.DataFrame):
     merged = ntp_df.merge(ptp_df, on="variation", suffixes=("_NTP", "_PTP"))
 
     print(f"\n{'='*140}")
-    print("FINAL SUMMARY: NTP vs PTP")
+    print("FINAL SUMMARY: NTP vs PTP (Steady-State Comparison)")
     print(f"{'='*140}")
 
     headers = [
         "Variation",
-        "Accuracy NTP", "Accuracy PTP", "Better",
-        "Precision NTP", "Precision PTP", "Better",
+        "SS-RMS NTP", "SS-RMS PTP", "Better",
+        "SS-Jitter NTP", "SS-Jitter PTP", "Better",
         "Conv NTP", "Conv PTP"
     ]
 
     rows = []
     for _, r in merged.iterrows():
-        better_acc = "NTP" if r['rms_offset_ms_NTP'] < r['rms_offset_ms_PTP'] else "PTP"
-        better_prec = "NTP" if r['std_dev_ms_NTP'] < r['std_dev_ms_PTP'] else "PTP"
+        better_rms = "NTP" if r['ss_rms_ms_NTP'] < r['ss_rms_ms_PTP'] else "PTP"
+        better_jitter = "NTP" if r['ss_jitter_ms_NTP'] < r['ss_jitter_ms_PTP'] else "PTP"
 
         rows.append([
             r["variation"],
-            f"{r['rms_offset_ms_NTP']:.3f}ms",
-            f"{r['rms_offset_ms_PTP']:.3f}ms",
-            better_acc,
-            f"{r['std_dev_ms_NTP']:.3f}ms",
-            f"{r['std_dev_ms_PTP']:.3f}ms",
-            better_prec,
+            f"{r['ss_rms_ms_NTP']:.3f} ms",
+            f"{r['ss_rms_ms_PTP']:.3f} ms",
+            better_rms,
+            f"{r['ss_jitter_ms_NTP']:.3f} ms",
+            f"{r['ss_jitter_ms_PTP']:.3f} ms",
+            better_jitter,
             f"{r['convergence_s_NTP']:.2f}s" if not pd.isna(r['convergence_s_NTP']) else "N/A",
             f"{r['convergence_s_PTP']:.2f}s" if not pd.isna(r['convergence_s_PTP']) else "N/A"
         ])
@@ -818,7 +854,7 @@ def main():
 
 
     # EXPERIMENT 1
-    if True:
+    if False:
         base_config = {
             "sampling_period": 0.1,
             "duration": 180,
@@ -856,7 +892,7 @@ def main():
 
 
     # EXPERIMENT 2
-    if False:
+    if True:
         base_config = {
             "sampling_period": 0.1,
             "duration": 300,
@@ -867,10 +903,10 @@ def main():
         }
 
         comparison_variations = [
-            {"Kp": 0.05, "Ki": 0.015, "sync_period": 5.0,  "description": "Sync=5s (Stable) "},
-            {"Kp": 0.05, "Ki": 0.015, "sync_period": 10.0, "description": "Sync=10s (Stable)"},
-            {"Kp": 0.05, "Ki": 0.015, "sync_period": 20.0, "description": "Sync=20s (Stable)"},
-            {"Kp": 0.05, "Ki": 0.015, "sync_period": 30.0, "description": "Sync=30s (Stable)"},
+            {"Kp": 0.05, "Ki": 0.015, "sync_period": 5.0,  "description": "Sync=5s"},
+            {"Kp": 0.05, "Ki": 0.015, "sync_period": 10.0, "description": "Sync=10s"},
+            {"Kp": 0.05, "Ki": 0.015, "sync_period": 20.0, "description": "Sync=20s"},
+            {"Kp": 0.05, "Ki": 0.015, "sync_period": 30.0, "description": "Sync=30s"},
         ]
 
         if True:

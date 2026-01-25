@@ -1,0 +1,8 @@
+NTP:
+On Slave Machine (Host):     sudo ntpd
+
+PTP:
+On Grandmaster Machine (VM): sudo ptp4l -i enp0s8 -f /etc/linuxptp/ptp4l.conf -m
+On Slave Machine (Host):     sudo ptp4l -i <interface_name> -f /home/loura/Desktop/SDIST-Assignment/ptp4l-gm.conf -s -m -S
+
+
