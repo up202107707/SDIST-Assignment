@@ -1,0 +1,75 @@
+
+
+% =====================================================================
+% 2. SOLUTION DESCRIPTION
+% =====================================================================
+\section{Solution Description}
+
+The solution is implemented in Python and organized  
+into well-defined modular components.
+
+\subsection{Time Source Abstraction}
+
+An abstract \texttt{TimeSource} class manages both  
+NTP and PTP queries, including:  
+\begin{itemize}
+    \item timeout protection,
+    \item consecutive failure counting,
+    \item fallback to the last known good time,
+    \item optional Gaussian noise simulation.
+\end{itemize}
+
+The NTP client uses standard UDP queries to a pool  
+of servers with automatic failover. Offset is calculated  
+using the classic four-timestamp method.
+
+The PTP client relies on the \texttt{pmc} tool (linuxptp package)  
+to read the current master offset via management messages.
+
+
+% =========
+\subsection{Servo Clock with PI Control}
+
+The servo clock maintains:  
+\begin{itemize}
+    \item current time,
+    \item nominal drift rate (in ppm),
+    \item dynamic rate correction provided by the PI controller.
+\end{itemize}
+
+The PI controller is updated at each synchronization event:  
+\begin{equation}
+u = K_p \cdot e + K_i \cdot \int e \, dt
+\end{equation}
+with integral windup protection.
+
+The effective clock rate becomes:  
+1 + drift + rate\_correction
+
+
+
+% =========
+\subsection{Experiment Framework}
+
+Each experiment runs for a fixed duration (e.g. 180 s),  
+samples clock state frequently (0.1 s intervals),  
+and performs synchronizations at configurable periods.
+
+The servo clock is always compared against an unsynchronized  
+baseline clock that only applies free drift.
+
+Multiple configurations are evaluated by varying:  
+\begin{itemize}
+    \item Kp and Ki values,
+    \item synchronization period (5 s to 30 s),
+    \item protocol (NTP vs PTP).
+\end{itemize}
+
+Key performance metrics include:  
+\begin{itemize}
+    \item mean absolute offset,
+    \item standard deviation / jitter,
+    \item maximum observed error,
+    \item convergence time,
+    \item settling time to $\pm$1\% and $\pm$0.1\% of initial offset.
+\end{itemize}
